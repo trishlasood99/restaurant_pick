@@ -1,0 +1,16 @@
+<div class='container'>
+<h1> Restaurants I Love </h1>
+<p>
+  <a href= '{% url "home" %}'> Home </a>
+  <a href='{% url "about" %}'> About</a>
+  <a href='{% url "contact" %}'> Contact</a>
+  {% if request.user.is_authenticated %}
+  <a href='{% url "restaurants" %}'> Restaurants</a>
+  <a href='{% url "menus:list" %}'> Menu Items </a>
+  <a href='{% url "logout" %}'> Logout </a>
+  {% else %}
+  <a href='{% url "logout" %}'> Login </a>
+  <a href='{% url "logout" %}'> Register </a>
+  {% endif %}
+</p>
+</div>

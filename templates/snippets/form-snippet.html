@@ -1,0 +1,10 @@
+{% if form.errors %}
+{{form.errors}}
+{% endif %}
+<form method='POST'> {% csrf_token %}
+  {{ form.as_p }}
+  <!--<input type='text' name='name' placeholder="Name of Restaurant"><br/>
+  <input type='text' name='location' placeholder="Location"><br/>
+  <input type='text' name='category' placeholder="category"><br/>-->
+  <button type='submit'>Save</button>
+  </form>

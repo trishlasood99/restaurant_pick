@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h1> Home </h1>
+<p>Welcome to my website!!</p>
+<p> If you already have an account proceed to <a href='{% url "login" %}'> login </a> </p>
+<p>Otherwise, please <a href='{% url "register" %}'>register</a></p>
+<!--<p> This is <code> {% verbatim %} {{html_var}}{% endverbatim %}</code> </p>
+<p>
+{% if num is not None %}
+Random number is {{num}}
+{% endif %}
+</p>-->
+{% endblock content %}
